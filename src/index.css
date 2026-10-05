@@ -1,0 +1,55 @@
+   @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+   @import "tailwindcss";
+
+   @font-face {
+       font-family: 'Comic Neue Angular';
+       src: url('/fonts/ComicNeue-Angular-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-style: normal;
+       font-display: swap;
+   }
+
+   .font-comic {
+       font-family: 'Comic Neue Angular', 'Comic Neue', sans-serif;
+       font-weight: 700;
+   }
+
+   /* Roblox stud texture blended over whatever bg-[#color] sits under it */
+   .bg-style {
+       @apply bg-[url(/roblox_default_texture.png)] bg-blend-overlay
+   }
+
+   body {
+       min-height: 100dvh;
+   }
+
+   .gift-wiggle {
+       animation: gift-wiggle 1.4s ease-in-out infinite;
+   }
+
+   @keyframes gift-wiggle {
+
+       0%,
+       60%,
+       100% {
+           transform: rotate(0) scale(1);
+       }
+
+       70% {
+           transform: rotate(-9deg) scale(1.08);
+       }
+
+       80% {
+           transform: rotate(9deg) scale(1.08);
+       }
+
+       90% {
+           transform: rotate(-6deg);
+       }
+   }
+
+   @media (prefers-reduced-motion: reduce) {
+       .gift-wiggle {
+           animation: none;
+       }
+   }
